@@ -25,7 +25,21 @@ html{
 body{
     font-family: roboto-black;
     max-width: 1500px;
+    scroll-behavior: smooth;
 }
+
+.volver{
+    z-index: 2;
+    position: fixed;
+    left: 87%;
+    bottom: 0;
+}
+
+.volver img{
+    width: 40px;
+
+}
+
 header{
     height: 80px;
     z-index: 1;
@@ -78,10 +92,10 @@ header{
     height: 100vh;
     grid-template-columns: repeat(2,max-content);
     justify-content: space-between;
-    width: 100%;
-    padding: 30px;
-    max-width: 1200px;
-    gap: 8rem;
+    width: 90%;
+    padding: 50px;
+    max-width: 1500px;
+    gap: 4rem;
 }
 .nav:target{
     --state-hamburguer: scale(0);
@@ -301,6 +315,11 @@ header{
     align-items: center;
 }
 
+.contacto h3{
+    font-size: 5rem;
+    margin-top: 3rem;
+}
+
 .contacto-container{
     display: flex;
     width: 90%;
@@ -405,3 +424,74 @@ footer{
     
 }
 
+@media screen and (max-width: 767px){
+    .target{
+        gap: 40px;
+    }
+    .serv_target{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .target-info h3{
+        font-size: 3rem;
+    }
+
+    .contacto-container{
+        flex-direction: column;
+    }
+
+    .contacto-izquierdo{
+        width: 100%;
+    }
+
+    .contacto-izquierdo form input{
+        width: 80%;
+    }
+
+    .contacto-izquierdo form textarea{
+        width: 80%;
+    }
+
+    .enviar{
+        width: 50% !important;
+    }
+
+    .mapa{
+        width: 100%;
+    }
+
+    .mapa iframe{
+        width: 100%;
+    }
+
+    .footer-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-info{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width:1023px){
+    .mapa iframe{
+        width: 100%;
+    }
+    .contacto-izquierdo form input{
+        width: 80%;
+    }
+
+    .contacto-izquierdo form textarea{
+        width: 80%;
+    }
+
+    .enviar{
+        width: 50% !important;
+    }
+
+}
